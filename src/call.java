@@ -47,7 +47,7 @@ class call{
     }
 
 
-    static {
+    static {        // load c library 
         String path = System.getProperty("user.dir") + "\\libaries\\swap.dll"; 
         try{
         System.load(path);             // loads swap.exe 
@@ -61,13 +61,11 @@ class call{
     public static native void wallpaperSwap(String path); // interface 
    
     private static String validFileName(String name){
-        name = name.replaceAll("\\s", "");
-        name = name.replaceAll(":", "");
-        name = name.replaceAll("!", "");
+        name = name.replaceAll("[\\\\\\\\/:*?\\\"<>|]", ""); // file char replace 
         return name;
     }
 
-    private static String imageStore(BufferedImage image, String title){
+    private static String imageStore(BufferedImage image, String title){       // stores image 
         title = validFileName(title);
         String location = System.getProperty("user.dir") + System.getProperty("file.separator") + "images" + System.getProperty("file.separator") + title + ".jpg";
         try{
@@ -81,7 +79,7 @@ class call{
         return System.getProperty("user.dir") + System.getProperty("file.separator") + "images" + System.getProperty("file.separator") + title + ".jpg";
     }
 
-    private static BufferedImage imageRequest(String pictureUrl){
+    private static BufferedImage imageRequest(String pictureUrl){   
     URL url_picture = null;
     BufferedImage image = null;
     try{
