@@ -6,4 +6,5 @@ the current image. This application works for Windows 11.
 Implimentation: We call the Nasa rest API using java http client. Then we handle the windows update using the windows C libraries. These are connected using Java JNI
 Java Native Interface. 
 
+Note: This only handles images and does not handle days in which we are given video or other media forms. 
 Author: Andrew Ho
