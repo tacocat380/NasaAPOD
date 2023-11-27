@@ -46,7 +46,6 @@ class call{
         System.out.println("Done");
     }
 
-
     static {        // load c library 
         String path = System.getProperty("user.dir") + "\\libaries\\swap.dll"; 
         try{
