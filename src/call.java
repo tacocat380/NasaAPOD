@@ -15,7 +15,7 @@ import java.net.URISyntaxException;
 class call{
     public static void main(String[]args){
 
-        String call = "https://api.nasa.gov/planetary/apod?api_key=Pd1xaYMIuh4V57laVLg9KZUv3sUc9by2cohwJ8hg";
+        String call = "https://api.nasa.gov/planetary/apod?api_key=***"; // use your own api key
         URI Myuri = createMyURI(call);
         System.out.println(Myuri.toString());
 
